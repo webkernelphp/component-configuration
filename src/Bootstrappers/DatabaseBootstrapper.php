@@ -25,13 +25,13 @@ use RuntimeException;
  * before any query runs, giving modules a single stable connection name:
  * 'webkernel_primary'.
  */
-final class DatabaseBootstrapper
+final readonly class DatabaseBootstrapper
 {
-    private const STATE_FILE = 'webkernel/database.json';
-    private const CONNECTION_NAME = 'webkernel_primary';
-    private const SUPPORTED_DRIVERS = ['sqlite', 'mysql', 'pgsql'];
+    private const string STATE_FILE = 'webkernel/database.json';
+    private const string CONNECTION_NAME = 'webkernel_primary';
+    private const array SUPPORTED_DRIVERS = ['sqlite', 'mysql', 'pgsql'];
 
-    public function __construct(private readonly Repository $config) {}
+    public function __construct(private Repository $config) {}
 
     public function apply(): void
     {

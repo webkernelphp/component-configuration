@@ -10,13 +10,12 @@ use Webkernel\StdConf\Bootstrappers\DatabaseBootstrapper;
 
 class StdConfServiceProvider extends ServiceProvider
 {
+    #[\Override]
     public function register(): void
     {
         // Register the dispatcher as a singleton so every module
         // gets the same instance and can push injections into it.
-        $this->app->singleton(ConfigInjectionDispatcher::class, function ($app) {
-            return new ConfigInjectionDispatcher($app['config']);
-        });
+        $this->app->singleton(ConfigInjectionDispatcher::class, fn(array $app): \Webkernel\StdConf\Bootstrappers\ConfigInjectionDispatcher => new ConfigInjectionDispatcher($app['config']));
     }
 
     public function boot(): void
