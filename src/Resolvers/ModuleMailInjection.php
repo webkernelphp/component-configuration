@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Webkernel\StdConf\Resolvers;
+namespace Webkernel\Component\Config\Resolvers;
 
-use Webkernel\StdConf\Contracts\InjectsConfig;
+use Webkernel\Component\Config\Contracts\InjectsConfig;
 
 /**
  * Example: a module that needs its own mailer (e.g. Resend for transactional email).

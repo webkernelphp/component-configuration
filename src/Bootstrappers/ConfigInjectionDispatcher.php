@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Webkernel\StdConf\Bootstrappers;
+namespace Webkernel\Component\Config\Bootstrappers;
 
 use Illuminate\Contracts\Config\Repository;
-use Webkernel\StdConf\Contracts\InjectsConfig;
+use Webkernel\Component\Config\Contracts\InjectsConfig;
 
 final class ConfigInjectionDispatcher
 {

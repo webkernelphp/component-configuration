@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Webkernel\StdConf\Contracts;
+namespace Webkernel\Component\Config\Contracts;
 
 interface InjectsConfig
 {

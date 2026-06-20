@@ -25,18 +25,18 @@
     },
     "autoload": {
         "psr-4": {
-            "Webkernel\\StdConf\\": "src/"
+            "Webkernel\\Component\\Config\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Webkernel\\StdConf\\Tests\\": "tests/"
+            "Webkernel\\Component\\Config\\Tests\\": "tests/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Webkernel\\StdConf\\Providers\\StdConfServiceProvider"
+                "Webkernel\\Component\\Config\\Providers\\StdConfServiceProvider"
             ]
         },
         "webkernel": {
