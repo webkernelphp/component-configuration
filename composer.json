@@ -1,10 +1,10 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
-    "name": "webkernel/standard-configuration",
+    "name": "webkernel/component-configuration",
     "description": "Runtime configuration injection engine for Webkernel. Allows modules to extend auth, database, and mail config without touching host application files.",
     "version": "0.1.0",
     "homepage": "https://www.webkernelphp.com/",
-    "type": "library",
+    "type": "webkernel-component",
     "license": "EPL-2.0",
     "authors": [
         {
@@ -17,8 +17,7 @@
         "issues": "https://github.com/webkernelphp/standard-configuration/issues"
     },
     "require": {
-        "php": "^8.2",
-        "laravel/framework": "^11.0|^12.0"
+        "laravel/framework": "*"
     },
     "require-dev": {
         "phpunit/phpunit": "^11.0",
