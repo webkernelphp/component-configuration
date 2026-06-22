@@ -21,9 +21,7 @@ class StdConfServiceProvider extends ServiceProvider
          * typed as 'Container' to match Laravel's container dependency injection.
          */
         $this->app->singleton(PlatformConfigStore::class);
-        $this->app->singleton(ConfigInjectionDispatcher::class, function (Container $app): ConfigInjectionDispatcher {
-            return new ConfigInjectionDispatcher($app['config']);
-        });
+        $this->app->singleton(ConfigInjectionDispatcher::class, fn(Container $app): ConfigInjectionDispatcher => new ConfigInjectionDispatcher($app['config']));
 
         $this->applyDatabaseBootstrapper();
     }
